@@ -13,6 +13,7 @@ UIGen is an AI-powered React component generator with live preview. Users descri
 - `npm run build` — production build
 - `npm run lint` — ESLint
 - `npm run test` — run all tests (vitest)
+
 - `npx vitest run src/path/to/test.test.ts` — run a single test file
 - `npx prisma migrate dev` — apply database migrations
 - `npx prisma generate` — regenerate Prisma client after schema changes
