@@ -30,8 +30,8 @@ export function ChatInterface() {
           <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 mb-4 shadow-sm">
             <Bot className="h-7 w-7 text-blue-600" />
           </div>
-          <p className="text-neutral-900 font-semibold text-lg mb-2">Start a conversation to generate React components</p>
-          <p className="text-neutral-500 text-sm max-w-sm">I can help you create buttons, forms, cards, and more</p>
+          <p className="text-neutral-900 font-semibold text-lg mb-2">Hello! What would you like to build today?</p>
+          <p className="text-neutral-500 text-sm max-w-sm">Just describe your idea and I&apos;ll bring it to life — buttons, forms, cards, and more!</p>
         </div>
       ) : (
         <ScrollArea ref={scrollAreaRef} className="flex-1 overflow-hidden">
