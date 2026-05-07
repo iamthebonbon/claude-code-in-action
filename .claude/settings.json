@@ -9,6 +9,5 @@
   "enabledPlugins": {
     "code-review@claude-plugins-official": true
   },
-  "api_api_key": "sk-ant-xclkasdkqwejlj12sadzcasdasdsaqwe",
-  "api_ant_key": "sk-ant-vpopkqlwkdnhkhruiugnkuiuir98932r"
+  "test": "test"
 }
