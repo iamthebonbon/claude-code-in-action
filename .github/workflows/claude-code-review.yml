@@ -43,4 +43,4 @@ jobs:
           claude_args: |
             --verbose
             --max-turns 24
-          prompt: '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}'
+          prompt: '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }} if you need to change the code, mention @claude to fix it.'
