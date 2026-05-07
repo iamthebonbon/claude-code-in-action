@@ -38,11 +38,10 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           plugin_marketplaces: 'https://github.com/anthropics/claude-code.git'
           plugins: 'code-review@claude-code-plugins'
-          allowed_bots: "claude"
           show_full_output: true
+          allowed_bots: "claude"
           claude_args: |
-            --verbose
             --max-turns 24
             --allowedTools "Read,Write,Edit,Grep,Glob,Bash(*)"
             --disallowedTools "Bash(rm -rf),Bash(sudo),Bash(git push),Bash(git commit),Bash(dd),Bash(mkfs)"
-          prompt: '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }} if you need to change the code, mention @claude to fix it.'
+          prompt: '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}'
