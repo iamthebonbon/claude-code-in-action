@@ -42,7 +42,7 @@ jobs:
           allowed_bots: "claude"
           claude_args: |
             --max-turns 24
-            --allowedTools "Read,Write,Edit,Grep,Glob,Bash(*)"
+            --allowedTools "Read,Write,Edit,Grep,Glob,Skill,Bash(*)"
             --disallowedTools "Bash(rm -rf),Bash(sudo),Bash(git push),Bash(git commit),Bash(dd),Bash(mkfs)"
           prompt: |
             Call /code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}
