@@ -35,4 +35,9 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-
+          show_full_output: true
+          allowed_bots: "claude"
+          claude_args: |
+            --max-turns 24
+            --allowedTools "Read,Write,Edit,Grep,Glob,Skill,Bash(*)"
+            --disallowedTools "Bash(rm -rf),Bash(sudo),Bash(git push),Bash(git commit),Bash(dd),Bash(mkfs)"
