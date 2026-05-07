@@ -41,32 +41,9 @@ jobs:
           allowed_bots: "claude"
           claude_args: |
             --verbose
-            --max-turns 8
+            --max-turns 24
           prompt: |
-            Review this pull request carefully.
-
-            Focus on:
-            - bugs
-            - edge cases
-            - performance issues
-            - security problems
-            - bad patterns
-            - readability
-            - maintainability
-
-            Rules:
-            - Leave INLINE review comments directly on relevant lines
-            - Only comment when there is a real issue
-            - Avoid generic praise or noise
-            - Each comment should contain:
-              1. the problem
-              2. why it matters
-              3. a suggested fix
-            - Mention @claude when code should be fixed automatically
-            - Prefer small actionable comments
-            - Do not summarize the PR unless critical
-
-            Review:
-            ${{ github.repository }}/pull/${{ github.event.pull_request.number }}
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://code.claude.com/docs/en/cli-reference for available options
+            /code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }} 
+            Left comment after reviewing the PR. Mention @claude within the comment to trigger a follow-up fix workflow.
+# See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
+# or https://code.claude.com/docs/en/cli-reference for available options
