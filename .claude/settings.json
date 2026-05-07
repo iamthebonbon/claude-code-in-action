@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "permissions": {
+    "allow": [
+      "mcp__playwright"
+    ],
+    "defaultMode": "plan"
+  },
+  "enabledPlugins": {
+    "code-review@claude-plugins-official": true
+  },
+  "api_key": "sk-ant-asdfasdfasdfasdfasdfasdfasdfasdfasdf"
+}
