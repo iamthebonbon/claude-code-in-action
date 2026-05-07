@@ -43,4 +43,20 @@ jobs:
           claude_args: |
             --verbose
             --max-turns 24
+            --allowedTools "
+              Read,
+              Write,
+              Edit,
+              Grep,
+              Glob,
+              Bash(git diff),
+              Bash(git log),
+              Bash(git status),
+              Bash(git show),
+              Bash(git check-ignore),
+              Bash(git ls-files),
+              Bash(cat),
+              Bash(echo),
+              Bash(head)
+            "
           prompt: '/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }} if you need to change the code, mention @claude to fix it.'
